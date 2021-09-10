@@ -1,4 +1,4 @@
-# Open-ended Capstone Final Presentation
+# AWS End-to-end Data Pipeline Open-ended Capstone Final Presentation
 
 
 ![image](https://user-images.githubusercontent.com/52821013/132917375-06c643fc-8487-4168-88dd-8388d6fd117d.png)
