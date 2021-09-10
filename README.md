@@ -72,5 +72,6 @@ In regards to thinking about other alternative approaches, I could have tried to
 
 
 
-### Note to self
+### Note to self/whoever is reading
 - I need to make sure to include necessary photos inside this Github page.
+- I am still finishing up this document.
