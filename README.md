@@ -95,6 +95,7 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 ### Diagram Representing Data Flow from One Component to Another via AWS Resources
 
+![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Final/blob/main/OE_Capstone_Step_7.drawio.png)
 
 ### Other Relevant Information
 
