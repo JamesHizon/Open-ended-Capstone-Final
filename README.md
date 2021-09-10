@@ -48,7 +48,7 @@ The dataset I chose to work with is from the GDELT Project website. Given that t
 ### Final Components of My Data Pipeline and Rationale Behind Choosing Them
 The final components of my data pipeline include integration of AWS S3, EMR, Athena and Glue, and CloudWatch. I was introduced to Athena and Glue earlier on via mentor, and so decided to stick to using it to automatically learn the schema from the two data streams with Glue and have fast querying with Athena. This was a great option especially after using EMR Notebook to run Spark job to transform data and load into the two separate file folders and the datasets that exist inside the two folders all share the same schema (columns and data types). An alternative would have been to work with AWS Redshift, yet I was not able to use it since I was not provided access via AWS Student account. AWS Redshift is notable for its' performance and scalability vs. Athena which is better in terms of portability and cost.
 
-In regards to thinking about other alternative approaches, I could have tried to integrate Airflow and EMR Notebooks, yet there were some technical difficulties which prevented me from setting up an AWS Access and Secret Access Key to SSH into EMR and allow me to automatically orchestrate running multiple EMR Notebooks. I had to manually launch and terminate multiple EMR Notebooks given that the cluster configuration settings did not allow me to fully process and transform data with Spark. In the future, it would be good to keep in mind the need to edit cluster configuration settings to be able to handle large datasets or even try to use Airflow with multiple EMR Notebooks.
+When thinking about other alternative approaches, I could have tried to integrate Airflow and EMR Notebooks, yet there were some technical difficulties which prevented me from setting up an AWS Access and Secret Access Key to SSH into EMR and allow me to automatically orchestrate running multiple EMR Notebooks. I had to manually launch and terminate multiple EMR Notebooks given that the cluster configuration settings did not allow me to fully process and transform data with Spark. In the future, it would be good to keep in mind the need to edit cluster configuration settings to be able to handle large datasets or even try to use Airflow with multiple EMR Notebooks.
 
 ### Project Ideation and Proposal
 Prior to main steps, I needed to brainstorm in regards to how I wanted to develop my data pipeline from end-to-end. I first had to explore various websites to find a dataset that is nearly 100s of GBs of data. Ideas stemmed from aggregating and pulling data from multiple sources to simply finding a dataset that already was in the range of hundreds of GBs of data. I researched and asked myself, "what type of data would involve hundreds of GBs?" Then, I thought about maybe trying to deal with data from a global scale, and found the GDELT via searching on Google. 
@@ -85,7 +85,7 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 
 6. Unit Testing
-  In order to apply unit testing, I worked with the ```unittest``` package. Unit testing within creation of data pipelines is a crucial step to ensure that all the data transformations meet the desired expectations. I was also tasked to deal with code coverage, where the ```coverage``` package would be needed to test to see how much of my code is covered by unit tests. Since my AWS Student account was not sufficient, I simply dealt with simple unit tests and explored possibility of the given package.
+  To apply unit testing, I worked with the ```unittest``` package. Unit testing within creation of data pipelines is a crucial step to ensure that all the data transformations meet the desired expectations. I was also tasked to deal with code coverage, where the ```coverage``` package would be needed to test to see how much of my code is covered by unit tests. Since my AWS Student account was not sufficient, I simply dealt with simple unit tests and explored possibility of the given package.
 
 
 7. Redeployment of Code to New AWS Cloud Resources
@@ -102,6 +102,8 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 ### Other Relevant Information
 I worked with AWS Educate account to work on my data pipeline project, where I was able to work with most of the key important services for data engineering. Yet, I was still limited due to the availability of resources on the account.
+
+In addition, it may beneficial to observe other repositories for further explanation of steps described.
 
 ### Real-Time Analytics Dashboard
 The following dashboard include mainly two metrics for analysis which are the EMR YarnMemoryAvailable statistic as well as S3 BucketSizeBytes. Other notable metrics that I could've added, but was not available, are billing metrics such as the total cost for AWS Services for a given day. In addition, AWS EMR has built-in metrics via tab, so I decided to include the "YARNMemoryAvailable" metric within EMR, as it shows how much memory is available to YARN inside EMR Cluster and YARN essential for orchestrating the flow of Spark jobs.
