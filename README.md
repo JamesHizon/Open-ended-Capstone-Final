@@ -101,7 +101,12 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 
 ### Real-Time Analytics Dashboard
+The following dashboard include mainly two metrics for analysis which are the EMR YarnMemoryAvailable statistic as well as S3 BucketSizeBytes. Other notable metrics that I could've added, but was not available, are billing metrics such as the total cost for AWS Services for a given day. In addition, AWS EMR has built-in metrics via tab, so I decided not to just include the YARNMemoryAvailable, since it shows how much memory is available to be processed by EMR Cluster. 
 
+In the real-world, I can think about other use cases of CloudWatch including having various metrics for various services alongside the billings metrics to understand which services tend to contribute the most to higher AWS cost.
+
+Link to AWS CloudWatch Dashboard:
+https://cloudwatch.amazonaws.com/dashboard.html?dashboard=Capstone_Dashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTcwNDQwOTE4MjcyOCIsIlUiOiJ1cy1lYXN0LTFfSHl0VG05cW5mIiwiQyI6IjFoMHR1YmFzZGltMTlnaGtmbms3MWFwMWttIiwiSSI6InVzLWVhc3QtMToyYWFmOGRmMS04ODA4LTRhMzYtODRlNS05ODA2ZjdjYmNhYjciLCJNIjoiUHVibGljIn0%3D
 
 
 ### Note to self/whoever is reading
