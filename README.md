@@ -98,7 +98,12 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 ### Diagram Representing Data Flow from One Component to Another via AWS Resources
 
+The following includes the flow of data via architecture diagram created through Draw.io:
+
+
 ![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Final/blob/main/OE_Capstone_Step_7.drawio.png)
+
+Above, we can see that I planned to use Redshift, and imagined how the end user would deal with the data. One can create a dashboard via AWS Quicksight or even try to build a predictive model via AWS SageMaker. Yet, based on AWS Educate account, I was limited to only deal with AWS S3, but could still interact with Glue and Athena for cost-effective querying of data.
 
 ### Other Relevant Information
 I worked with AWS Educate account to work on my data pipeline project, where I was able to work with most of the key important services for data engineering. Yet, I was still limited due to the availability of resources on the account.
