@@ -69,11 +69,13 @@ Then, I began with working with Draw.io to create and propose a plan for develop
   Then, I performed the following to see the first five rows of the dataframe vs. needing to visualize with matplotlib:
   ```df.head(5)```
 
+
 3. Transforming
   While continuing to work with ```pandas```, I basically tried to merely drop null values and then write back to the same CSV file so I would get a glimpse of how data transformations would look like with a larger dataset. The main code snippet is as follows:
   ```df.dropna(axis=1)```
 
   Above, we see that an "axis" argument can be used to determine if one should drop values on rows or columns. I specified that I should drop the whole column is there are null values, but in later steps, decided to drop data based on other conditions.
+
 
 4. Prototyping
   In my data pipeline prototype, I basically created a Python OOP Class, called "DataPipeline", where I create a method to automatically extract, transform and load data into an S3 bucket using Python packages like ```bs4```, ```requests```, ```pandas```, and ```boto3```. The ```boto3``` package was used to integrate Python with AWS services.
@@ -85,7 +87,8 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 6. Unit Testing
   In order to apply unit testing, I worked with the ```unittest``` package. Unit testing within creation of data pipelines is a crucial step to ensure that all the data transformations meet the desired expectations. I was also tasked to deal with code coverage, where the ```coverage``` package would be needed to test to see how much of my code is covered by unit tests. Since my AWS Student account was not sufficient, I simply dealt with simple unit tests and explored possibility of the given package.
 
-7. Redeployment
+
+7. Redeployment of Code to New AWS Cloud Resources
   After my unit testing step, I needed to make some updates to my data transformations like ensuring that I dropped the desired columns and figure out whether it was necessary to do data type conversion if I could just use a ```CAST()``` function or integrate AWS Glue to automatically detect schema. Then, I recreated another S3 bucket, launched various EMR Clusters to process data inside EMR Notebook, and then integrated AWS Glue and Athena to automatically detect the schema and figure out how to query data from two data stream tables.
 
 
@@ -98,12 +101,14 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 ![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Final/blob/main/OE_Capstone_Step_7.drawio.png)
 
 ### Other Relevant Information
-
+I worked with AWS Educate account to work on my data pipeline project, where I was able to work with most of the key important services for data engineering. Yet, I was still limited due to the availability of resources on the account.
 
 ### Real-Time Analytics Dashboard
-The following dashboard include mainly two metrics for analysis which are the EMR YarnMemoryAvailable statistic as well as S3 BucketSizeBytes. Other notable metrics that I could've added, but was not available, are billing metrics such as the total cost for AWS Services for a given day. In addition, AWS EMR has built-in metrics via tab, so I decided not to just include the YARNMemoryAvailable, since it shows how much memory is available to be processed by EMR Cluster. 
+The following dashboard include mainly two metrics for analysis which are the EMR YarnMemoryAvailable statistic as well as S3 BucketSizeBytes. Other notable metrics that I could've added, but was not available, are billing metrics such as the total cost for AWS Services for a given day. In addition, AWS EMR has built-in metrics via tab, so I decided to include the "YARNMemoryAvailable" metric within EMR, as it shows how much memory is available to YARN inside EMR Cluster and YARN essential for orchestrating the flow of Spark jobs.
 
 In the real-world, I can think about other use cases of CloudWatch including having various metrics for various services alongside the billings metrics to understand which services tend to contribute the most to higher AWS cost.
+
+![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Final/blob/main/Screen%20Shot%202021-09-10%20at%204.28.57%20PM.png)
 
 Link to AWS CloudWatch Dashboard:
 https://cloudwatch.amazonaws.com/dashboard.html?dashboard=Capstone_Dashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTcwNDQwOTE4MjcyOCIsIlUiOiJ1cy1lYXN0LTFfSHl0VG05cW5mIiwiQyI6IjFoMHR1YmFzZGltMTlnaGtmbms3MWFwMWttIiwiSSI6InVzLWVhc3QtMToyYWFmOGRmMS04ODA4LTRhMzYtODRlNS05ODA2ZjdjYmNhYjciLCJNIjoiUHVibGljIn0%3D
@@ -112,3 +117,4 @@ https://cloudwatch.amazonaws.com/dashboard.html?dashboard=Capstone_Dashboard&con
 ### Note to self/whoever is reading
 - I need to make sure to include necessary photos inside this Github page.
 - I am still finishing up this document.
+- Need to include Python scripts and EMR Notebooks.
