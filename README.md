@@ -91,7 +91,7 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 ### Entity-Relationship Diagram for Data Model from Step 4
 
-
+![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Final/blob/main/Step_4_Data_Model.drawio.png)
 
 ### Diagram Representing Data Flow from One Component to Another via AWS Resources
 
