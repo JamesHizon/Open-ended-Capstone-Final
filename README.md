@@ -95,11 +95,11 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 - After my unit testing step, I needed to make some updates to my data transformations like ensuring that I dropped the desired columns and figure out whether it was necessary to do data type conversion if I could just use a ```CAST()``` function or integrate AWS Glue to automatically detect schema. Then, I recreated another S3 bucket, launched various EMR Clusters to process data inside EMR Notebook, and then integrated AWS Glue and Athena to automatically detect the schema and figure out how to query data from two data stream tables.
 
 
-### Entity-Relationship Diagram for Data Model from Step 4
+### Entity-Relationship Diagram for Data Model
 
 ![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Final/blob/main/Step_4_Data_Model.drawio.png)
 
-### Diagram Representing Data Flow from One Component to Another via AWS Resources
+### Data Flow Architecture Diagram with AWS Resources
 
 The following includes the flow of data via architecture diagram created through Draw.io:
 
