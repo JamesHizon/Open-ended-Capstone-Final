@@ -59,37 +59,35 @@ Then, I began with working with Draw.io to create and propose a plan for develop
 
 
 1. Acquisition:
-  In regards to the extraction step of my data pipeline, I wrote a Python script to download a sample of 10 CSV files using the ```bs4``` (BeautifulSoup) and ```requests``` package.
+- In regards to the extraction step of my data pipeline, I wrote a Python script to download a sample of 10 CSV files using the ```bs4``` (BeautifulSoup) and ```requests``` package.
 
 
 2. Exploratory Data Analysis
-  In order to see what data transformations are necessary, I ended up using ```pandas``` in Python to create a dataframe as follows:
+- In order to see what data transformations are necessary, I ended up using ```pandas``` in Python to create a dataframe as follows:
  ```df = pd.read_csv(<FILENAME.csv>)```
 
-  Then, I performed the following to see the first five rows of the dataframe vs. needing to visualize with matplotlib:
-  ```df.head(5)```
+- Then, I performed the following to see the first five rows of the dataframe vs. needing to visualize with matplotlib: ```df.head(5)```
 
 
-3. Transforming
-  While continuing to work with ```pandas```, I basically tried to merely drop null values and then write back to the same CSV file so I would get a glimpse of how data transformations would look like with a larger dataset. The main code snippet is as follows:
-  ```df.dropna(axis=1)```
+3. Transforming:
+- While continuing to work with ```pandas```, I basically tried to merely drop null values and then write back to the same CSV file so I would get a glimpse of how data transformations would look like with a larger dataset. The main code snippet is as follows: ```df.dropna(axis=1)```
 
-  Above, we see that an "axis" argument can be used to determine if one should drop values on rows or columns. I specified that I should drop the whole column is there are null values, but in later steps, decided to drop data based on other conditions.
-
-
-4. Prototyping
-  In my data pipeline prototype, I basically created a Python OOP Class, called "DataPipeline", where I create a method to automatically extract, transform and load data into an S3 bucket using Python packages like ```bs4```, ```requests```, ```pandas```, and ```boto3```. The ```boto3``` package was used to integrate Python with AWS services.
-
-5. Scaling Prototype
-  In order to scale my data pipeline prototype, I needed to update my class to automatically extract and load data into an S3 bucket, used PySpark API to read and transform the data, and then loaded the data into two separate file folders so that I could integrate Athena and Glue. In addition, I added other methods to remove and delete unnecessary data to save space.
+- Above, we see that an "axis" argument can be used to determine if one should drop values on rows or columns. I specified that I should drop the whole column is there are null values, but in later steps, decided to drop data based on other conditions.
 
 
-6. Unit Testing
-  To apply unit testing, I worked with the ```unittest``` package. Unit testing within creation of data pipelines is a crucial step to ensure that all the data transformations meet the desired expectations. I was also tasked to deal with code coverage, where the ```coverage``` package would be needed to test to see how much of my code is covered by unit tests. Since my AWS Student account was not sufficient, I simply dealt with simple unit tests and explored possibility of the given package.
+4. Prototyping:
+- In my data pipeline prototype, I basically created a Python OOP Class, called "DataPipeline", where I create a method to automatically extract, transform and load data into an S3 bucket using Python packages like ```bs4```, ```requests```, ```pandas```, and ```boto3```. The ```boto3``` package was used to integrate Python with AWS services.
+
+5. Scaling Prototype:
+- In order to scale my data pipeline prototype, I needed to update my class to automatically extract and load data into an S3 bucket, used PySpark API to read and transform the data, and then loaded the data into two separate file folders so that I could integrate Athena and Glue. In addition, I added other methods to remove and delete unnecessary data to save space.
 
 
-7. Redeployment of Code to New AWS Cloud Resources
-  After my unit testing step, I needed to make some updates to my data transformations like ensuring that I dropped the desired columns and figure out whether it was necessary to do data type conversion if I could just use a ```CAST()``` function or integrate AWS Glue to automatically detect schema. Then, I recreated another S3 bucket, launched various EMR Clusters to process data inside EMR Notebook, and then integrated AWS Glue and Athena to automatically detect the schema and figure out how to query data from two data stream tables.
+6. Unit Testing:
+- To apply unit testing, I worked with the ```unittest``` package. Unit testing within creation of data pipelines is a crucial step to ensure that all the data transformations meet the desired expectations. I was also tasked to deal with code coverage, where the ```coverage``` package would be needed to test to see how much of my code is covered by unit tests. Since my AWS Student account was not sufficient, I simply dealt with simple unit tests and explored possibility of the given package.
+
+
+7. Redeployment of Code to New AWS Cloud Resources:
+- After my unit testing step, I needed to make some updates to my data transformations like ensuring that I dropped the desired columns and figure out whether it was necessary to do data type conversion if I could just use a ```CAST()``` function or integrate AWS Glue to automatically detect schema. Then, I recreated another S3 bucket, launched various EMR Clusters to process data inside EMR Notebook, and then integrated AWS Glue and Athena to automatically detect the schema and figure out how to query data from two data stream tables.
 
 
 ### Entity-Relationship Diagram for Data Model from Step 4
@@ -125,3 +123,4 @@ https://cloudwatch.amazonaws.com/dashboard.html?dashboard=Capstone_Dashboard&con
 - I need to make sure to include necessary photos inside this Github page.
 - I am still finishing up this document.
 - Need to include Python scripts and EMR Notebooks.
+- Include photo of interaction w/ Glue and Athena.
