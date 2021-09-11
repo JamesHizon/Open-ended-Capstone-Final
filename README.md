@@ -132,5 +132,5 @@ Link to AWS CloudWatch Dashboard:
 https://cloudwatch.amazonaws.com/dashboard.html?dashboard=Capstone_Dashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTcwNDQwOTE4MjcyOCIsIlUiOiJ1cy1lYXN0LTFfSHl0VG05cW5mIiwiQyI6IjFoMHR1YmFzZGltMTlnaGtmbms3MWFwMWttIiwiSSI6InVzLWVhc3QtMToyYWFmOGRmMS04ODA4LTRhMzYtODRlNS05ODA2ZjdjYmNhYjciLCJNIjoiUHVibGljIn0%3D
 
 
-### Main Takeaways
+### Project Reflection
 Working on this data pipeline capstone project required lots of time and effort. I took what I learned from the course material to practice. Originally, the data pipeline project guidance provided is taught in Azure, but I took those concepts, researched more about implementation of AWS resources, and applied it as I finished my end-to-end project in AWS. After dealing with this data pipeline project alongside other mini-projects, I feel more confident that I will be able to complete end-to-end data pipeline projects in the real-world, knowing I will end up dealing with massive amounts of messy data.
