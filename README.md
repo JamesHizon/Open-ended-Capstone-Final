@@ -108,6 +108,12 @@ The following includes the flow of data via architecture diagram created through
 
 Above, we can see that I planned to use Redshift, and imagined how the end user would deal with the data. One can create a dashboard via AWS Quicksight or even try to build a predictive model via AWS SageMaker. Yet, based on AWS Educate account, I was limited to only deal with AWS S3, but could still interact with Glue and Athena for cost-effective querying of data.
 
+### Athena and Glue
+
+The following is a screenshot after automating schema creation and querying 10 rows of data from 1 table created from the 2 File Folders based on two separate file streams:
+
+![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Step-9/blob/main/Screen%20Shot%202021-08-09%20at%2012.40.51%20PM.png)
+
 ### Other Relevant Information
 I worked with AWS Educate account to work on my data pipeline project, where I was able to work with most of the key important services for data engineering. Yet, I was still limited due to the availability of resources on the account.
 
@@ -124,8 +130,5 @@ Link to AWS CloudWatch Dashboard:
 https://cloudwatch.amazonaws.com/dashboard.html?dashboard=Capstone_Dashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTcwNDQwOTE4MjcyOCIsIlUiOiJ1cy1lYXN0LTFfSHl0VG05cW5mIiwiQyI6IjFoMHR1YmFzZGltMTlnaGtmbms3MWFwMWttIiwiSSI6InVzLWVhc3QtMToyYWFmOGRmMS04ODA4LTRhMzYtODRlNS05ODA2ZjdjYmNhYjciLCJNIjoiUHVibGljIn0%3D
 
 
-### Note to self/whoever is reading
-- I need to make sure to include necessary photos inside this Github page.
-- I am still finishing up this document.
-- Need to include Python scripts and EMR Notebooks.
-- Include photo of interaction w/ Glue and Athena.
+### Main Takeaways
+Working on this data pipeline capstone project required lots of time and effort. I took what I learned from the course material to practice. Originally, I the data pipeline guidance is for data pipeline development taught in Azure, but I took those concepts and applied it as I finished my end-to-end project in AWS. After dealing with this data pipeline project alongside other mini-projects, I feel more confident that I will be able to complete end-to-end data pipeline projects in the real-world, knowing I will end up dealing with massive amounts of messy data.
