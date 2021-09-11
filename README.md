@@ -20,8 +20,13 @@
 10. Build a Monitoring Dashboard
 
 ### Attached Files
-1. Include EDA on Jupyter.
-2. Include EMR Notebooks.
+Inside this repository, one can find various Python scripts and Jupyter Notebook files. I realized I ended up using different naming conventions, so here is the order of files:
+  1. Project_Data_Collection.py
+  2. Capstone Project - Data Exploration.ipynb
+  3. Step5_Capstone_Project.py
+  4. Test_S3_Upload.ipynb
+  5. OEC_Unit_Test_JNB.ipynb
+  6. New_ELT_Notebook.ipynb
 
 
 ### AWS CloudFormation Template
