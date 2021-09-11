@@ -114,7 +114,7 @@ The following is a screenshot after automating schema creation and querying 10 r
 
 ![alt text](https://github.com/JamesHizon/Open-ended-Capstone-Step-9/blob/main/Screen%20Shot%202021-08-09%20at%2012.40.51%20PM.png)
 
-After reviewing the data as shown above, we can think about what types of queries can be made based on the structure of the data. For example, the themes column has multiple records. One way to deal with this is to apply normalization, where I end up creating multiple tables as a result of this column. Another way is to keep the data as is, and simply apply a wildcard operator within the ```WHERE``` clause, i.e. ```SELECT COUNT(*) FROM "datastreams"."data_stream_1" WHERE themes LIKE %ENVIRONMENT%``` to count how many records are related to environmental impact.
+After reviewing the data as shown above, we can think about what types of queries can be made based on the structure of the data. For example, the themes column has multiple records. One way to deal with this is to apply normalization, where I end up creating multiple tables as a result of this column. Another way is to keep the data as is, and simply apply a wildcard operator within the ```WHERE``` clause, i.e. ```SELECT COUNT(*) FROM "datastreams"."data_stream_1" WHERE themes LIKE "%ENVIRONMENT%";``` to count how many records are related to environmental impact.
 
 ### Other Relevant Information
 I worked with AWS Educate account to work on my data pipeline project, where I was able to work with most of the key important services for data engineering. Yet, I was still limited due to the availability of resources on the account.
